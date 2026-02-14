@@ -6,13 +6,13 @@ const entradaDeDados = readline.createInterface({
     output: process.stdout
 })
 
-entradaDeDados.question("Digite o primeiro numero de entrada: ", function(numero1){
+entradaDeDados.question("Digite o primeiro número: ", function(numero1){
     let num1 = numero1
 
-    entradaDeDados.question("Digite o segundo número de entrada: ", function(numero2){
+    entradaDeDados.question("Digite o segundo número: ", function(numero2){
         let num2 = numero2
 
-        entradaDeDados.question("Informe a operação matemática que sera feita(adição , subtração , multiplicação, divisão): ", function(operacaoMatematica){
+        entradaDeDados.question("Digite a operação desejada: adição, subtração, multiplicação ou divisão:", function(operacaoMatematica){
             let operacao = operacaoMatematica
 
 
@@ -24,7 +24,7 @@ entradaDeDados.question("Digite o primeiro numero de entrada: ", function(numero
                 if(calcResultado){
                     console.log(calcResultado)
                 }else{
-                    console.log("ERRO: Não foi possivel realizar o calculo2")
+                    console.log("ERRO: Não foi possivel realizar o calculo")
                 }
                 
            } else{
