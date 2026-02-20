@@ -1,5 +1,5 @@
 const readline = require("readline")
-const processamento = require("../AULA 04/processamento")
+const processamento = require("./modelo/processamento")
 
 const entradaDeDados = readline.createInterface({
     input: process.stdin,
@@ -12,7 +12,7 @@ entradaDeDados.question("Digite o primeiro número: ", function(numero1){
     entradaDeDados.question("Digite o segundo número: ", function(numero2){
         let num2 = numero2
 
-        entradaDeDados.question("Digite a operação desejada: adição, subtração, multiplicação ou divisão:", function(operacaoMatematica){
+        entradaDeDados.question("Digite a operação desejada: adição, subtração, multiplicação ou divisão: ", function(operacaoMatematica){
             let operacao = operacaoMatematica
 
 
@@ -22,7 +22,7 @@ entradaDeDados.question("Digite o primeiro número: ", function(numero1){
             
                 let calcResultado = processamento.calcularValores(num1, num2, operacao)
                 if(calcResultado){
-                    console.log(calcResultado)
+                    console.log("Resultado: "+ calcResultado)
                 }else{
                     console.log("ERRO: Não foi possivel realizar o calculo")
                 }
